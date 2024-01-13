@@ -1,0 +1,186 @@
+﻿
+
+header {
+    margin-top: 20px;
+    margin-right: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.infoTicket {
+    margin-right: 50px;
+    direction: rtl;
+}
+
+.status {
+    margin-top: 50px;
+    margin-right: 30px;
+    direction: rtl;
+    width: 250px;
+}
+
+.form-select {
+    height: 30px;
+}
+
+#secOne {
+    display: flex;
+    justify-content: right;
+}
+
+label {
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h5 {
+    margin-top: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.report {
+    margin-top: 50px;
+    margin-right: 30px;
+    direction: rtl;
+    width: 250px;
+}
+
+.reportSection {
+    display: grid;
+    grid-template-columns: 100% 100%;
+    grid-gap: 30px;
+}
+
+button {
+    display: block;
+    align-items: center;
+    gap: 10px;
+}
+
+#secTwo {
+    direction: rtl;
+    margin-top: 50px;
+    margin-right: 30px;
+}
+
+#closeTicketWindow {
+    width: 120px;
+    height: 30px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#editTicket {
+    width: 140px;
+    height: 30px;
+    background-color: #1684fc;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#deleteTicket {
+    width: 140px;
+    height: 30px;
+    background-color: #fc3a16;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+#btn-belonghoursReport, #belongsVer {
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid rgb(212, 211, 211);
+    width: 150px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 14px;
+    height: 30px;
+}
+
+.fa-trash-o, .fa-pencil, .fa-times, .fa-clock-o, .fa-random {
+    float: left;
+    margin-top: 3px;
+}
+
+.ticketOperation {
+    display: flex;
+    align-content: end;
+}
+
+.operationTitle {
+    font-size: 18px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+#ticketTitle {
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    width: 700px !important;
+}
+
+#ticketDescription {
+    border: 1px solid rgb(203, 203, 203);
+    border-radius: 5px;
+    margin-bottom: 15px;
+    min-height: 100px !important;
+    width: 700px !important;
+}
+
+#attached {
+    border: 1px solid rgb(165, 161, 161);
+    border-radius: 5px;
+    background-color: white;
+    width: 155px;
+    height: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 13px;
+}
+
+#attached {
+    /* padding: 10px 20px; */
+    background-color: white; /* Set the background color of the button */
+    border: 1px solid rgb(208, 208, 208); /* No border by default */
+    outline: none; /* Remove the focus outline */
+    cursor: pointer; /* Change mouse pointer on hover */
+    position: relative; /* Position relative to its normal position */
+    font-size: 13px; /* Set the font-size */
+}
+
+    #attached:after {
+        content: ''; /* Add content for the pseudo-element */
+        position: absolute; /* Position absolutely within the button */
+        left: 0; /* Align to the left */
+        bottom: -3px; /* Position it at the bottom with a slight offset */
+        width: 100%; /* Full width of the button */
+        height: 3px; /* Height of the green line */
+        background-color: #61ea61; /* Standard green color; replace with the exact color code if known */
+    }
+
+#ticketRemarks, #ticketChatt {
+    border: 1px solid rgb(165, 161, 161);
+    border-radius: 5px;
+    background-color: white;
+    width: 155px;
+    height: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 13px;
+}
+
+
+
+

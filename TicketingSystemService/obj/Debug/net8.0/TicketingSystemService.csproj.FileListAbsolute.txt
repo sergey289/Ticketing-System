@@ -1,0 +1,34 @@
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.deps.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.AssemblyInfoInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.AssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.csproj.CoreCompileInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\obj\Debug\net8.0\refint\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\TicketingSystemService\obj\Debug\net8.0\ref\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.deps.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.AssemblyInfoInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.AssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.csproj.CoreCompileInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\obj\Debug\net8.0\refint\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\TicketingSystemService\obj\Debug\net8.0\ref\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.deps.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\bin\Debug\net8.0\TicketingSystemService.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.AssemblyInfoInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.AssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.csproj.CoreCompileInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.sourcelink.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\refint\TicketingSystemService.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\TicketingSystemService.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\TicketingSystemService\obj\Debug\net8.0\ref\TicketingSystemService.dll

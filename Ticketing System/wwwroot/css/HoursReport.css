@@ -1,0 +1,63 @@
+﻿
+.container {
+    border: 1px solid #c7c7c7;
+    width: 22vw;
+    height: auto;
+    direction: rtl;
+    border-radius: 5px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 3.4px 3.4px 2.7px rgba(0, 0, 0, 0.006), 8.7px 8.7px 6.9px rgba(0, 0, 0, 0.009), 17.7px 17.7px 14.2px rgba(0, 0, 0, 0.011), 36.5px 36.5px 29.2px rgba(0, 0, 0, 0.014), 100px 100px 80px rgba(0, 0, 0, 0.02);
+}
+
+#hoursReportSave {
+    width: 160px;
+    height: 32px;
+    background-color: #1684fc;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 13px;
+}
+
+#hoursReportCancel {
+    width: 100px;
+    height: 32px;
+    background-color: #fc3a16;
+    border: none;
+    color: white;
+    border-radius: 3px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 13px;
+    margin-right: 20px;
+}
+
+label {
+    font-size: 15px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+#desc {
+    height: 150px;
+    max-height: 150px;
+}
+
+h5 {
+    margin-top: 15px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.mb-3 {
+    margin: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+        height: 80%;
+    }
+}
+

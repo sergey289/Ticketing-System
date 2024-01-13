@@ -1,0 +1,75 @@
+﻿@page
+@model Ticketing_Systems.Pages.AddNewTicketModel
+@{
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/AddNewTicket.css" />
+</head>
+<body>
+
+
+   <form id="newTicketForm" style="border: 1px solid black;">
+
+        <div class="container">
+
+            <h5>יצירת טיקט חדש</h5>
+
+            <br>
+            
+            <div class="mb-3">               
+                <label for="ticketTitle" class="form-label">כותרת דרישה</label>
+                <input type="text" class="form-control" id="ticketTitle">
+            </div>
+
+            <div class="mb-3">
+                <label for="priority">עדיפות</label>               
+                <select class="form-select" aria-label="Default select example" id="priority"> </select>                  
+            </div>
+
+            
+            <div class="mb-3">
+                <label for="typeTreatment">סוג טיפול</label>               
+                <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>                  
+            </div>
+
+
+            <div class="mb-3">
+                <label for="tagging">תיוג</label>               
+                <select class="form-select" aria-label="Default select example" id="tagging"> </select>                  
+            </div>
+
+            <div class="mb-3">
+                <label for="formFileMultiple">הוספת קובץ</label>
+                <br>
+       
+                <button id="fileSelect" class="btn btn-primary" onclick="document.getElementById('formFileMultiple').click()">
+                 בחירת קובץ
+                </button>
+                <input type="file" id="formFileMultiple" multiple>
+                <!-- number of selected files -->
+                <span id="fileNames">6</span>
+            </div>
+
+             <div class="mb-3">
+                <label for="ticketDesc">תיאור קריאה</label>
+                <textarea class="form-control" placeholder="" id="desc" ></textarea>             
+             </div>
+
+             <div class="mb-3">
+                <input type="button"  value="ליצור" id="createNewTicket">
+                <input type="button"  value="ביטול" id="cencelTicket">
+             </div>
+        </div>
+   </form>
+
+   
+</body>
+</html>

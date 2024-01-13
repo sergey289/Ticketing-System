@@ -1,0 +1,91 @@
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\bin\Debug\net8.0\appsettings.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\bin\Debug\net8.0\Ticketing System.staticwebassets.runtime.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\bin\Debug\net8.0\Ticketing System.exe
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\bin\Debug\net8.0\Ticketing System.deps.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\bin\Debug\net8.0\Ticketing System.runtimeconfig.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\bin\Debug\net8.0\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\bin\Debug\net8.0\Ticketing System.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.AssemblyInfoInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.AssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.csproj.CoreCompileInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.RazorAssemblyInfo.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.RazorAssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\staticwebassets\msbuild.Ticketing System.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\staticwebassets\msbuild.build.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\scopedcss\bundle\Ticketing System.styles.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\scopedcss\projectbundle\Ticketing System.bundle.scp.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\refint\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\Ticketing System.genruntimeconfig.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing Systems\Ticketing Systems\obj\Debug\net8.0\ref\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\bin\Debug\net8.0\appsettings.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\bin\Debug\net8.0\Ticketing System.staticwebassets.runtime.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\bin\Debug\net8.0\Ticketing System.exe
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\bin\Debug\net8.0\Ticketing System.deps.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\bin\Debug\net8.0\Ticketing System.runtimeconfig.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\bin\Debug\net8.0\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\bin\Debug\net8.0\Ticketing System.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.AssemblyInfoInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.AssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.csproj.CoreCompileInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.RazorAssemblyInfo.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.RazorAssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\staticwebassets\msbuild.Ticketing System.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\staticwebassets\msbuild.build.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\scopedcss\bundle\Ticketing System.styles.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\scopedcss\projectbundle\Ticketing System.bundle.scp.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\refint\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\Ticketing System.genruntimeconfig.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing System\Ticketing System\obj\Debug\net8.0\ref\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\bin\Debug\net8.0\appsettings.Development.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\bin\Debug\net8.0\appsettings.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\bin\Debug\net8.0\Ticketing System.staticwebassets.runtime.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\bin\Debug\net8.0\Ticketing System.exe
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\bin\Debug\net8.0\Ticketing System.deps.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\bin\Debug\net8.0\Ticketing System.runtimeconfig.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\bin\Debug\net8.0\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\bin\Debug\net8.0\Ticketing System.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.AssemblyInfoInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.AssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.csproj.CoreCompileInputs.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.RazorAssemblyInfo.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.RazorAssemblyInfo.cs
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.sourcelink.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\staticwebassets.build.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\staticwebassets.development.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\staticwebassets\msbuild.Ticketing System.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\staticwebassets\msbuild.build.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Ticketing System.props
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\staticwebassets.pack.json
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\scopedcss\bundle\Ticketing System.styles.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\scopedcss\projectbundle\Ticketing System.bundle.scp.css
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\refint\Ticketing System.dll
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.pdb
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\Ticketing System.genruntimeconfig.cache
+C:\Users\serge\OneDrive\Рабочий стол\Ticketing-System\Ticketing System\obj\Debug\net8.0\ref\Ticketing System.dll
