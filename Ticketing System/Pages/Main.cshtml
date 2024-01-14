@@ -56,6 +56,7 @@
     <link rel="stylesheet" href="~/css/Main.css"/>
     <link rel="stylesheet" href="css/AddNewTicket.css" />
     <link rel="stylesheet" href="~/css/NewUser.css" />
+    <link rel="stylesheet" href="~/css/NewPassword.css" />
     <script src="~/js/Main.js"></script>
     <script src="~/js/EditTicket.js"></script>
 
@@ -152,7 +153,7 @@
                         <a id="addNewUser" href="#">הוספת משתמש</a>
                     </li>
                     <li>
-                        <a href="#">שינוי סיסמא</a>
+                       <a id="changePassword" href="#">שינוי סיסמא</a>
                     </li>
                     </ul>
                   </li>
@@ -327,6 +328,39 @@
 
                 </form>
             </div>
+
+            <div id="NewPassword" hidden>
+
+                <form id="NewPasswordForm">
+
+                    <div class="container newPasswordContent">
+
+                        <h5>שינוי סיסמא</h5>
+
+                        <br />
+
+                        <div class="mb-3">
+                            <label for="oldPassword">סיסמא ישנה</label>
+                            <input type="password" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="newPassword">סיסמא חדשה</label>
+                            <input type="password" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="confirmPassword">אימות סיסמא</label>
+                            <input type="password" class="form-control" />
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="button" value="שמור" id="saveNewPassword" />
+                            <input type="button" value="יציאה" id="newPasswordCancel" />
+                        </div>
+                    </div>
+                </form>
+    </div>
 
 
       </body>

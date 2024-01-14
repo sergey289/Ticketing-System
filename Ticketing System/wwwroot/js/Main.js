@@ -23,6 +23,11 @@
     $("#NewUserCancel").click(function () {
         $("#popUpNewUser").attr("hidden", true);
     });
+    $("#changePassword").click(function () {
+        $("#NewPassword").removeAttr("hidden");
+    });
+
+    
 
     $("#fileSelect").on("click", function (e) {
         e.preventDefault();
