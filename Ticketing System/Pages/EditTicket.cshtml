@@ -62,7 +62,8 @@
             <i class="fa-solid fa-ticket" style="color: #5b85a1;"></i>
 
         </div>
-    
+
+      
         <div class="row g-3">
 
             <div class="col">
@@ -90,218 +91,248 @@
 
         </div>
 
+
+    
     </header>
 
     <main>
 
-        <div id="secOne">
 
-            <section class="report">
+        <div class="row">
 
-                <h5 class="operationTitle">דיווח</h5>
-    
-                <div class="reportSection">
-    
-                    <div class="mb-3">
-                        <label for="priority">אחראי תיקון</label>               
-                        <select class="form-select" aria-label="Default select example" id="priority"> </select>                  
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="priority">מחלקה</label>               
-                        <select class="form-select" aria-label="Default select example" id="priority"> </select>                  
-                    </div>
-    
-                </div>
-       
-                <div class="reportSection">
-    
-                    <div class="mb-3">
-                        <label for="priority">שם אפליקציה</label>               
-                        <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>                  
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="priority">גירסה</label>               
-                        <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>                  
-                    </div>
-    
-                </div>
+            <div class="col">
+                <div class="list-group" style="margin: 10px;">
+                    <a href="#" class="list-group-item list-group-item-action active">
+                      Cras justo odio
+                    </a>
+                    <a href="#" class="list-group-item list-group-item-action">Dapibus ac facilisis in</a>
+                    <a href="#" class="list-group-item list-group-item-action">Morbi leo risus</a>
+                    <a href="#" class="list-group-item list-group-item-action">Porta ac consectetur ac</a>
+                    <a href="#" class="list-group-item list-group-item-action disabled">Vestibulum at eros</a>
+                  </div>
+              </div>
+            
+
+            
+            <div class="col" style="border: 1px solid rgb(207, 207, 207);padding: 10px;"  >
+
+                <div id="secOne">
+
+                    <section class="report">
+        
+                        <h5 class="operationTitle">דיווח</h5>
+            
+                        <div class="reportSection">
+            
+                            <div class="mb-3">
+                                <label for="priority">אחראי תיקון</label>               
+                                <select class="form-select" aria-label="Default select example" id="priority"> </select>                  
+                            </div>
+            
+                            <div class="mb-3">
+                                <label for="priority">מחלקה</label>               
+                                <select class="form-select" aria-label="Default select example" id="priority"> </select>                  
+                            </div>
+            
+                        </div>
                
-       
-                <div class="reportSection">
-    
-                    <div class="mb-3">
-                        <label for="priority">זמן פתיחה מוערך</label>               
-                        <select class="form-select" aria-label="Default select example" id="ticketStatus"> </select>                  
-                    </div>
-    
-                    <div class="mb-3">
-                        <label for="priority">Code Review</label>               
-                        <select class="form-select" aria-label="Default select example" id="ticketStatus"> </select>                  
-                    </div>
-    
-                </div>
-
-                <div style="display: flex;gap: 10px;">                   
-                    <div>
-                        <button id="btn-belonghoursReport">דיווח שעות
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>
-                        </button>                     
-                    </div>
-                
-                    <div>  
-                        <button id="belongsVer">שייך לגירסה
-                            <i class="fa fa-random" aria-hidden="true"></i>                          
-                        </button>       
-                    </div>
-                </div>
-    
-            </section>
+                        <div class="reportSection">
             
-    
-            <section class="status">
-    
-             <h5 class="operationTitle">סטטוס</h5>
-    
-                <div class="mb-3">
-                    <label for="priority">עדיפות</label>               
-                    <select class="form-select" aria-label="Default select example" id="priority"> </select>                  
-                </div>
-    
-                <div class="mb-3">
-                    <label for="priority">סוג טיפול</label>               
-                    <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>                  
-                </div>
-     
-                <div class="mb-3">
-                    <label for="priority">סטטוס קריאה</label>               
-                    <select class="form-select" aria-label="Default select example" id="ticketStatus"> </select>                  
-                </div>
-    
-            </section>
+                            <div class="mb-3">
+                                <label for="priority">שם אפליקציה</label>               
+                                <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>                  
+                            </div>
             
-        </div>
-  
-        <div id="secTwo">
-
-            <section class="ticketDetails">
-
-                <h5 class="operationTitle">פרטי טיקט</h5>
-
-                    <div id="title">
-                        <label for="">כותרת</label>
-                        <br>
-                        <input type="text" id="ticketTitle" style="width: 40%;">
-                    </div>
-
-                    <div>
-
-                       <label for="">תיאור</label>
-                          <br>
-                        <textarea id="ticketDescription" style="width: 40%;"></textarea>
-                    </div>
-
-                    <div style="display: flex; gap: 10px;">
-                        <button id="attached">מצורפים
-                          
-                            <svg viewBox="0 0 100 100" width="18" style="float: inline-end;" id="numberAttachedFiles">                         
-                                <circle cx="50" cy="50" r="45" fill="red" stroke="black" stroke-width="2"/>                          
-                                <text x="50%" y="55%" fill="white" font-size="60" font-family="Arial" text-anchor="middle" alignment-baseline="central">5</text>
-                           </svg>
-                           
-                        </button>
-                        <button id="ticketRemarks">הערות</button>
-                        <button id="ticketChatt">צאט</button>
-                    </div>
-
-                </section>
-
-        </div>
-
-        <div id="popUpVersionAssociation" hidden>
-
-              <form id="VersionAssociationForm">
+                            <div class="mb-3">
+                                <label for="priority">גירסה</label>               
+                                <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>                  
+                            </div>
+            
+                        </div>
+                       
+               
+                        <div class="reportSection">
+            
+                            <div class="mb-3">
+                                <label for="priority">זמן פתיחה מוערך</label>               
+                                <select class="form-select" aria-label="Default select example" id="ticketStatus"> </select>                  
+                            </div>
+            
+                            <div class="mb-3">
+                                <label for="priority">Code Review</label>               
+                                <select class="form-select" aria-label="Default select example" id="ticketStatus"> </select>                  
+                            </div>
+            
+                        </div>
         
-                <div class="container">
-
-                  <h5>שיוך גירסה</h5>
-
-                  <br />
-
-                  <div class="mb-3">
-                    <label for="versionName">גירסה</label>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                      id="versionName"
-                    ></select>
-                  </div>
-
-                  <div class="mb-3">
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                      id="versionName2"
-                    ></select>
-                  </div>
-
-                  <div class="mb-3">
-                    <input type="button" value="שמור" id="VersionAssociationSave" />
-                    <input type="button" value="יציאה" id="VersionAssociationCancel" />
-                  </div>
+                        <div style="display: flex;gap: 10px;" id="operationButtons">                   
+                            <div>
+                                <button id="btn-belongVer">דיווח שעות
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>
+                                </button>                     
+                            </div>
+                        
+                            <div>  
+                                <button id="belongsVer">שייך לגירסה
+                                    <i class="fa fa-random" aria-hidden="true"></i>                          
+                                </button>       
+                            </div>
+                        </div>
+            
+                    </section>
+                    
+            
+                    <section class="status">
+            
+                     <h5 class="operationTitle">סטטוס</h5>
+            
+                        <div class="mb-3">
+                            <label for="priority">עדיפות</label>               
+                            <select class="form-select" aria-label="Default select example" id="priority"> </select>                  
+                        </div>
+            
+                        <div class="mb-3">
+                            <label for="priority">סוג טיפול</label>               
+                            <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>                  
+                        </div>
+             
+                        <div class="mb-3">
+                            <label for="priority">סטטוס קריאה</label>               
+                            <select class="form-select" aria-label="Default select example" id="ticketStatus"> </select>                  
+                        </div>
+            
+                    </section>
+                    
                 </div>
+          
+                <div id="secTwo">
         
-              </form>
-         </div>
+                    <section class="ticketDetails">
+        
+                        <h5 class="operationTitle">פרטי טיקט</h5>
+        
+                            <div id="title">
+                                <label for="">כותרת</label>
+                                <br>
+                                <input type="text" id="ticketTitle" style="width: 40%;">
+                            </div>
+        
+                            <div>
+        
+                               <label for="">תיאור</label>
+                                  <br>
+                                <textarea id="ticketDescription" style="width: 40%;"></textarea>
+                            </div>
+        
+                            <div style="display: flex; gap: 10px;">
+                                <button id="attached">מצורפים
+                                  
+                                    <svg viewBox="0 0 100 100" width="18" style="float: inline-end;" id="numberAttachedFiles">                         
+                                        <circle cx="50" cy="50" r="45" fill="red" stroke="black" stroke-width="2"/>                          
+                                        <text x="50%" y="55%" fill="white" font-size="60" font-family="Arial" text-anchor="middle" alignment-baseline="central">5</text>
+                                   </svg>
+                                   
+                                </button>
+                                <button id="ticketRemarks">הערות</button>
+                                <button id="ticketChatt">צאט</button>
+                            </div>
+        
+                        </section>
+        
+                </div>
+
+            </div>
+
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+    
+
+
 
         <div id="popUpHoursReport" hidden>
 
-              <form id="HoursReportForm">
-
-                <div class="container">
-
-                  <h5>דיווח שעות עבודה</h5>
-
-                  <br />
-
-                  <div class="mb-3">
-                    <label for="datetimeReport" class="form-label">תאריך דיווח</label>
-                    <input
-                      dir="rtl"
-                      id="datetimeReport"
-                      class="form-control"
-                      type="date"
-                      lang="he"
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="priority">שעות עבודה</label>
-                    <input
-                      dir="rtl"
-                      id="datetimeReport"
-                      class="form-control"
-                      type="time"
-                      lang="he"
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <label for="HoursReportDesc">הערות</label>
-                    <textarea class="form-control" placeholder="" id="desc"></textarea>
-                  </div>
-
-                  <div class="mb-3">
-                    <input type="button" value="שמור" id="hoursReportSave" />
-                    <input type="button" value="יציאה" id="hoursReportCancel" />
-                  </div>
-
+            <form id="HoursReportForm">
+              <div class="container">
+                <h5>דיווח שעות עבודה</h5>
+      
+                <br />
+      
+                <div class="mb-3">
+                  <label for="datetimeReport" class="form-label">תאריך דיווח</label>
+                  <input
+                    dir="rtl"
+                    id="datetimeReport"
+                    class="form-control"
+                    type="date"
+                    lang="he"
+                  />
                 </div>
+      
+                <div class="mb-3">
+                  <label for="priority">שעות עבודה</label>
+                  <input
+                    dir="rtl"
+                    id="datetimeReport"
+                    class="form-control"
+                    type="time"
+                    lang="he"
+                  />
+                </div>
+      
+                <div class="mb-3">
+                  <label for="HoursReportDesc">הערות</label>
+                  <textarea class="form-control" placeholder="" id="desc"></textarea>
+                </div>
+      
+                <div class="mb-3">
+                  <input type="button" value="שמור" id="hoursReportSave" />
+                  <input type="button" value="יציאה" id="hoursReportCancel" />
+                </div>
+              </div>
+            </form>
+        </div>
 
-              </form>
-    </div>
 
+        <div id="VersionAssociation" hidden>
+            <form id="VersionAssociationForm">
+              <div class="container">
+                <h5>שיוך גירסה</h5>
+      
+                <br />
+      
+                <div class="mb-3">
+                  <label for="versionName">גירסה</label>
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    id="versionName"
+                  ></select>
+                </div>
+      
+                <div class="mb-3">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    id="versionName2"
+                  ></select>
+                </div>
+      
+                <div class="mb-3">
+                  <input type="button" value="שמור" id="VersionAssociationSave" />
+                  <input type="button" value="יציאה" id="VersionAssociationCancel" />
+                </div>
+              </div>
+            </form>
+        </div>
+        
 
     </main>
 

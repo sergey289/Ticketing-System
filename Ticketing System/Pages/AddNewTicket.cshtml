@@ -16,60 +16,62 @@
 <body>
 
 
-   <form id="newTicketForm" style="border: 1px solid black;">
+    <form id="newTicketForm" style="border: 1px solid black;">
 
         <div class="container">
 
             <h5>יצירת טיקט חדש</h5>
 
             <br>
-            
-            <div class="mb-3">               
+
+            <div class="mb-3">
                 <label for="ticketTitle" class="form-label">כותרת דרישה</label>
                 <input type="text" class="form-control" id="ticketTitle">
             </div>
 
             <div class="mb-3">
-                <label for="priority">עדיפות</label>               
-                <select class="form-select" aria-label="Default select example" id="priority"> </select>                  
-            </div>
-
-            
-            <div class="mb-3">
-                <label for="typeTreatment">סוג טיפול</label>               
-                <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>                  
+                <label for="priority">עדיפות</label>
+                <select class="form-select" aria-label="Default select example" id="priority"> </select>
             </div>
 
 
             <div class="mb-3">
-                <label for="tagging">תיוג</label>               
-                <select class="form-select" aria-label="Default select example" id="tagging"> </select>                  
+                <label for="typeTreatment">סוג טיפול</label>
+                <select class="form-select" aria-label="Default select example" id="typeTreatment"> </select>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="tagging">תיוג</label>
+                <select class="form-select" aria-label="Default select example" id="tagging"> </select>
             </div>
 
             <div class="mb-3">
                 <label for="formFileMultiple">הוספת קובץ</label>
                 <br>
-       
+
                 <button id="fileSelect" class="btn btn-primary" onclick="document.getElementById('formFileMultiple').click()">
-                 בחירת קובץ
+                    בחירת קובץ
                 </button>
                 <input type="file" id="formFileMultiple" multiple>
                 <!-- number of selected files -->
                 <span id="fileNames">6</span>
             </div>
 
-             <div class="mb-3">
+            <div class="mb-3">
                 <label for="ticketDesc">תיאור קריאה</label>
-                <textarea class="form-control" placeholder="" id="desc" ></textarea>             
-             </div>
+                <textarea class="form-control" placeholder="" id="desc"></textarea>
+            </div>
 
-             <div class="mb-3">
-                <input type="button"  value="ליצור" id="createNewTicket">
-                <input type="button"  value="ביטול" id="cencelTicket">
-             </div>
+            <div class="mb-3">
+                <input type="button" value="ליצור" id="createNewTicket">
+                <input type="button" value="ביטול" id="cencelTicket">
+            </div>
+
+
         </div>
-   </form>
+    </form>
 
-   
+
 </body>
 </html>

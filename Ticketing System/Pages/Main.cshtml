@@ -1,6 +1,12 @@
 ﻿@page
 @model Ticketing_Systems.Pages.MainModel
+@using Ticketing_Systems.Data;
+@inject SQL sql;
+
 @{
+
+  //  sql.GetStatuses();
+
 }
 
 
@@ -53,181 +59,169 @@
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
-    <link rel="stylesheet" href="~/css/Main.css"/>
+
+  
     <link rel="stylesheet" href="css/AddNewTicket.css" />
     <link rel="stylesheet" href="~/css/NewUser.css" />
     <link rel="stylesheet" href="~/css/NewPassword.css" />
+    <link rel="stylesheet" href="~/css/Main.css" />
     <script src="~/js/Main.js"></script>
     <script src="~/js/EditTicket.js"></script>
 
+
+
 </head>
-      <body>
-
-            <div class="wrapper">
-
-              <aside id="sidebar">
-                <div class="sidebar-header">
-                  <div style="display: flex; justify-content: center">
-                    <input
-                      id="imgProfile"
-                      type="image"
-                      src="https://static-00.iconduck.com/assets.00/person-circle-icon-512x512-zwz8ctki.png"
-                    />
-                  </div>
-                  <br />
-                  <div style="display: flex; justify-content: center">
-                    <label id="userName">Sergey Butermaiev</label>
-                  </div>
+<body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="sidebar-header">
+                <div style="display: flex; justify-content: center">
+                    <img id="imgProfile" src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1746" alt="avatar">
                 </div>
-
-                <ul class="list-unstyled components">
-                  <div class="gradient-line"></div>
-
-                  <li class="active">
-                    <a
-                      href="#homeSubmenu"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      class="dropdown-toggle"
-                    >
-                      <i class="fa fa-ticket" aria-hidden="true"></i> טיקטים
-                    </a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                      <li>
-                        <a href="#">כל הטיקטים</a>
-                      </li>
-                      <li>
-                        <a href="#">טיקטים פתוחים</a>
-                      </li>
-                      <li>
-                        <a href="#">טיקטים שחזרו</a>
-                      </li>
-                      <li>
-                        <a href="#">טיקטים בלי זמנים</a>
-                      </li>
-                      <li>
-                        <a href="#">טיקטים שאושרו</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#pageSubmenu"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      class="dropdown-toggle"
-                      >דוחות מנהלים
-                      <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                      <li>
-                        <a href="#"> Code Review חריגות</a>
-                      </li>
-                      <li>
-                        <a href="#">טיקטים שלא מקושרים לגירסה</a>
-                      </li>
-                      <li>
-                        <a href="#">Power BI</a>
-                      </li>
-                      <li>
-                        <a href="#">SLA חריגות</a>
-                      </li>
-                    </ul>
-                  </li>
-
-                  <li>
-                    <a
-                      href="#systemManagement"
-                      data-toggle="collapse"
-                      aria-expanded="false"
-                      class="dropdown-toggle"
-                      >ניהול מערכת
-                      <i class="fa fa-cog" aria-hidden="true"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="systemManagement">
-                    <li>
-                        <a href="#">ניהול משתמשים</a>
-                    </li>
-                    <li>
-                        <a id="addNewUser" href="#">הוספת משתמש</a>
-                    </li>
-                    <li>
-                       <a id="changePassword" href="#">שינוי סיסמא</a>
-                    </li>
-                    </ul>
-                  </li>
-
-                  <li style="margin-top: 100%">
-                    <a href="#output" data-toggle="collapse" aria-expanded="false"
-                      >יציאה
-                      <i class="fa fa-sign-out" aria-hidden="true"></i>
-                    </a>
-                  </li>
-                </ul>
-              </aside>
-
-              <main class="content">
-                <header>
-                  <table>
-                    <tr>
-                      <td style="width: 80px; height: 80px"></td>
-                      <td>
-                        <button id="newTicket">
-                          טיקט חדש
-                          <i class="fa fa-plus" aria-hidden="true"></i>
-                        </button>
-                      </td>
-                    </tr>
-                  </table>
-                </header>
-
-                <section>
-                  <div id="jsGrid"></div>         
-                </section>
-              </main>
+                <br />
+                <div style="display: flex; justify-content: center">
+                    <label id="userName">Sergey Butermaiev</label>
+                </div>
             </div>
 
-            <div id="popUpNewTicket" hidden>
-              <form id="newTicketForm">
-                <div class="container">
-                  <h5>יצירת טיקט חדש</h5>
+            <ul class="list-unstyled components">
+                <div class="gradient-line"></div>
 
-                  <br />
+                <li class="active">
+                    <a href="#homeSubmenu"
+                       data-toggle="collapse"
+                       aria-expanded="false"
+                       class="dropdown-toggle">
+                        <i class="fa fa-ticket" aria-hidden="true"></i> טיקטים
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">כל הטיקטים</a>
+                        </li>
+                        <li>
+                            <a href="#">טיקטים פתוחים</a>
+                        </li>
+                        <li>
+                            <a href="#">טיקטים שחזרו</a>
+                        </li>
+                        <li>
+                            <a href="#">טיקטים בלי זמנים</a>
+                        </li>
+                        <li>
+                            <a href="#">טיקטים שאושרו</a>
+                        </li>
+                    </ul>
+                </li>
 
-                  <div class="mb-3">
+                <li>
+                    <a href="#pageSubmenu"
+                       data-toggle="collapse"
+                       aria-expanded="false"
+                       class="dropdown-toggle">
+                        דוחות מנהלים
+                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#"> Code Review חריגות</a>
+                        </li>
+                        <li>
+                            <a href="#">טיקטים שלא מקושרים לגירסה</a>
+                        </li>
+                        <li>
+                            <a href="#">Power BI</a>
+                        </li>
+                        <li>
+                            <a href="#">SLA חריגות</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#systemManagement"
+                       data-toggle="collapse"
+                       aria-expanded="false"
+                       class="dropdown-toggle">
+                        ניהול מערכת
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                    </a>
+                    <ul class="collapse list-unstyled" id="systemManagement">
+                        <li>
+                            <a href="#">ניהול משתמשים</a>
+                        </li>
+                        <li>
+                            <a href="#">הוספת משתמש</a>
+                        </li>
+                        <li>
+                            <a href="#">שינוי סיסמא</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li style="margin-top: 50vh;">
+                    <a href="#output" data-toggle="collapse" aria-expanded="false">
+                        יציאה
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <header>
+                <table>
+                    <tr>
+                        <td style="width: 80px; height: 80px"></td>
+                        <td>
+                            <button id="newTicket">
+                                טיקט חדש
+                                <i class="fa fa-plus" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                </table>
+            </header>
+
+            <section>
+                <div id="jsGrid"></div>
+            </section>
+        </main>
+    </div>
+
+    <div id="popUpNewTicket" hidden>
+        <form id="newTicketForm">
+            <div class="container">
+                <h5>יצירת טיקט חדש</h5>
+
+                <br />
+
+                <div class="mb-3">
                     <label for="ticketTitle" class="form-label">כותרת דרישה</label>
                     <input type="text" class="form-control" id="ticketTitle" />
-                  </div>
+                </div>
 
-                  <div class="mb-3">
+                <div class="mb-3">
                     <label for="priority">עדיפות</label>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                      id="priority"
-                    ></select>
-                  </div>
+                    <select class="form-select"
+                            aria-label="Default select example"
+                            id="priority"></select>
+                </div>
 
-                  <div class="mb-3">
+                <div class="mb-3">
                     <label for="typeTreatment">סוג טיפול</label>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                      id="typeTreatment"
-                    ></select>
-                  </div>
+                    <select class="form-select"
+                            aria-label="Default select example"
+                            id="typeTreatment"></select>
+                </div>
 
-                  <div class="mb-3">
+                <div class="mb-3">
                     <label for="tagging">תיוג</label>
-                    <select
-                      class="form-select"
-                      aria-label="Default select example"
-                      id="tagging"
-                    ></select>
-                  </div>
+                    <select class="form-select"
+                            aria-label="Default select example"
+                            id="tagging"></select>
+                </div>
 
-                  <div class="mb-3">
+                <div class="mb-3">
                     <label for="formFileMultiple">הוספת קובץ</label>
                     <br />
 
@@ -235,135 +229,30 @@
 
                     <input type="file" id="formFileMultiple" multiple />
                     <span id="fileNames">6</span>
-                  </div>
+                </div>
 
-                  <div class="mb-3">
+                <div class="mb-3">
                     <label for="ticketDesc">תיאור קריאה</label>
                     <textarea class="form-control" placeholder="" id="desc"></textarea>
-                  </div>
+                </div>
 
-                  <div class="mb-3">
+                <div class="mb-3">
                     <input type="button" value="ליצור" id="createNewTicket" />
                     <input type="button" value="ביטול" id="cencelTicket" />
-                  </div>
                 </div>
-              </form>
             </div>
-
-            <div id="popUpNewUser" hidden>
-
-                <form id="NewUserForm">
-
-                    <div class="container newUserContainer">
-
-                        <div class="row">
-
-                            <div class="col">
-                                <div class="mb-3">
-
-                                    <h5>הוספת משתמש חדש</h5>
-
-                                    <br />
-
-                                    <div class="mb-3">
-                                <label for="newUserName">שם מלא</label>
-                                        <input id="newUserName" type="text" class="form-control newUserControl" />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="emailUser">אימייל</label>
-                                        <input id="emailUser" type="email" class="form-control newUserControl" />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="userPhone">טלפון</label>
-                                        <input id="userPhone" type="tel" class="form-control newUserControl" />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="titleUser">תפקיד</label>
-                                        <select id="titleUser" class="form-select"></select>
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="passwordUser">סיסמא</label>
-                                        <input id="passwordUser" type="password" class="form-control newUserControl" />
-                                    </div>
-
-                                    <div class="mb-3">
-                                        <label for="confirmUserPassword">אימות סיסמא</label>
-                                        <input id="confirmUserPassword"
-                                               type="password"
-                                               class="form-control newUserControl" />
-                                    </div>
-                                    <br />
-                                    <div class="mb-3">
-                                        <input type="button" value="שמור" id="NewUserSave" />
-                                        <input type="button" value="ביטל" id="NewUserCancel" />
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col"></div>
-                            <div class="col">
-
-                                <div style="text-align: center; margin-top: 40px;">
-                                    <!-- Placeholder for profile image -->
-                                    <div style="width: 150px; height: 150px; background-color: #ddd; border-radius: 50%; display: inline-block; margin-bottom: 20px;margin-left: 22px;">
-                                        <!-- Replace with your image -->
-                                        <img src="https://img.myloview.pl/fototapety/awatar-profil-glowy-sylwetka-call-center-zdjecie-meskie-400-151766550.jpg" alt="Profile" style="width: 100%; height: 100%; border-radius: 50%;">
-                                    </div>
-
-                                    <div style="margin-left: 20px;">
-                                        <button id="newUserSelectImage" class="btn btn-primary" onclick="document.getElementById('formFileMultiple').click()">
-                                            בחר תמונה חדשה
-                                        </button>
-                                        <input type="button" value="מחק תמונה" id="newUserDeleteImage" />
-                                        <br>
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                </form>
-            </div>
-
-            <div id="NewPassword" hidden>
-
-                <form id="NewPasswordForm">
-
-                    <div class="container newPasswordContent">
-
-                        <h5>שינוי סיסמא</h5>
-
-                        <br />
-
-                        <div class="mb-3">
-                            <label for="oldPassword">סיסמא ישנה</label>
-                            <input type="password" class="form-control" />
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="newPassword">סיסמא חדשה</label>
-                            <input type="password" class="form-control" />
-                        </div>
-
-                        <div class="mb-3">
-                            <label for="confirmPassword">אימות סיסמא</label>
-                            <input type="password" class="form-control" />
-                        </div>
-
-                        <div class="mb-3">
-                            <input type="button" value="שמור" id="saveNewPassword" />
-                            <input type="button" value="יציאה" id="newPasswordCancel" />
-                        </div>
-                    </div>
-                </form>
+        </form>
     </div>
-
-
-      </body>
+</body>
 
 
     </html>
+
+
+@{
+
+
+  
+
+
+}
