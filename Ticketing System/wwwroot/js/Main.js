@@ -1,13 +1,10 @@
 ﻿$(function () {
-
-    ShowData();
-
-    console.log("Main.JS");
-
     $("#sidebarCollapse").on("click", function () {
         $("#sidebar").toggleClass("active");
     });
-    
+
+    ShowData();
+
     $("#newTicket").click(function () {
         $("#popUpNewTicket").removeAttr("hidden");
     });
@@ -16,26 +13,12 @@
         $("#popUpNewTicket").attr("hidden", true);
     });
 
-    $("#addNewUser").click(function () {
-        $("#popUpNewUser").removeAttr("hidden");
-    });
- 
-    $("#NewUserCancel").click(function () {
-        $("#popUpNewUser").attr("hidden", true);
-    });
-    $("#changePassword").click(function () {
-        $("#NewPassword").removeAttr("hidden");
-    });
-
-    
-
     $("#fileSelect").on("click", function (e) {
         e.preventDefault();
         setTimeout(function () {
             $("#formFileMultiple").click();
         }, 100);
     });
-  
 });
 
 function ShowData() {
@@ -89,7 +72,27 @@ function ShowData() {
             },
             { name: "Work_time", title: "זמן עבודה", type: "number", width: 80 },
             { name: "Ticket_Title", title: "כותרת קריאה", type: "text", width: 200 },
-            { name: "Status", title: "סטטוס", type: "text", width: 90 },
+            {
+                name: "Status",
+                title: "סטטוס",
+                type: "text",
+                width: 90,
+
+                itemTemplate: function (value, item) {
+                    if (value == "Open") {
+                        return $("<div>")
+                            .css({
+                                color: "green",
+                                fontWeight: "bold"
+                            })
+                            .text(value);
+                    }
+                    else {
+                        return value;
+                    }
+                },
+
+            },
             { name: "Opened_by", title: "נפתח על ידי", type: "text", width: 120 },
             { name: "Developer_Name", title: "מפתח", type: "text", width: 100 },
             {
@@ -102,12 +105,13 @@ function ShowData() {
                     if (value == "גבוהה") {
                         return $("<div>")
                             .css({
-                                "background-color": "red",
+                                "background-color": "#ed5252",
                                 color: "white",
-                                "border-radius": "10px",
+                                fontWeight: "bold"
                             })
                             .text(value);
-                    } else {
+                    }
+                    else {
                         return value;
                     }
                 },
@@ -127,5 +131,5 @@ function ShowData() {
     });
 }
 function OpenEditPage() {
-    window.open("/EditTicket", "_blank").focus();
+    window.open("EditTicket.html", "_blank").focus();
 }

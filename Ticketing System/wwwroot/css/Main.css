@@ -25,14 +25,12 @@ a:focus {
     display: flex;
     width: 100%;
     align-items: stretch;
+    min-height: 100vh;
 }
 
 #sidebar {
     min-width: 200px;
-    max-width: 200px;
-    height: 90vh !important;
-    max-height: 90vh;
-    background: #1684fc;
+    background: #001A47;
     color: #fff;
     transition: all 0.3s;
     font-size: 12px !important;
@@ -47,7 +45,7 @@ a:focus {
         justify-content: center;
         font-size: 16px;
         padding: 20px;
-        background: #1684fc;
+        background: #001A47;
         width: 200px;
     }
 
@@ -68,9 +66,11 @@ a:focus {
         display: block;
     }
 
-        #sidebar ul li a:hover {
-            background: #383ee9;
-        }
+    #sidebar ul a:hover {
+        background: #383ee9;
+        border-radius: 10px;
+    }
+
 
     #sidebar ul li.active > a,
     a[aria-expanded="true"] {
@@ -149,12 +149,10 @@ a.article:hover {
 }
 
 #imgProfile {
-    width: 90px !important;
+    width: 120px !important;
+    border-radius: 50%;
 }
 
-#userName {
-    margin-right: 10px;
-}
 
 .gradient-line {
     width: 100%;
@@ -175,7 +173,7 @@ a.article:hover {
     width: 130px;
     height: 32px;
     border: 1px solid rgb(241, 237, 237);
-    background-color: #00c955;
+    background-color: #07672f;
     color: white;
     border-radius: 5px;
     font-size: 15px;
@@ -208,4 +206,8 @@ iframe {
 
 #jsGrid {
     min-width: 500px;
+}
+
+main.content {
+    background-color: #f1f2f3;
 }

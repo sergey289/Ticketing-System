@@ -4,11 +4,9 @@
 @inject SQL sql;
 
 @{
-
   //  sql.GetStatuses();
-
+    Layout = "_Layout";
 }
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,236 +15,255 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-          crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/8e0aa5d7dc.js"
-            crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-
-    <script src="js/Main.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-            integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-            integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-            crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-          rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-          crossorigin="anonymous" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-            crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/8e0aa5d7dc.js"
-            crossorigin="anonymous"></script>
-    <!-- jsgrid -->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
-
-  
-    <link rel="stylesheet" href="css/AddNewTicket.css" />
-    <link rel="stylesheet" href="~/css/NewUser.css" />
-    <link rel="stylesheet" href="~/css/NewPassword.css" />
+    @* <link rel="stylesheet" href="css/AddNewTicket.css" /> *@
+    <link rel="stylesheet" href="~/css/NewUser.css"/>
+    @* <link rel="stylesheet" href="~/css/NewPassword.css" /> *@
     <link rel="stylesheet" href="~/css/Main.css" />
     <script src="~/js/Main.js"></script>
     <script src="~/js/EditTicket.js"></script>
 
-
-
 </head>
-<body>
-    <div class="wrapper">
-        <aside id="sidebar">
-            <div class="sidebar-header">
-                <div style="display: flex; justify-content: center">
-                    <img id="imgProfile" src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1746" alt="avatar">
-                </div>
-                <br />
-                <div style="display: flex; justify-content: center">
-                    <label id="userName">Sergey Butermaiev</label>
-                </div>
-            </div>
-
-            <ul class="list-unstyled components">
-                <div class="gradient-line"></div>
-
-                <li class="active">
-                    <a href="#homeSubmenu"
-                       data-toggle="collapse"
-                       aria-expanded="false"
-                       class="dropdown-toggle">
-                        <i class="fa fa-ticket" aria-hidden="true"></i> טיקטים
-                    </a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">כל הטיקטים</a>
-                        </li>
-                        <li>
-                            <a href="#">טיקטים פתוחים</a>
-                        </li>
-                        <li>
-                            <a href="#">טיקטים שחזרו</a>
-                        </li>
-                        <li>
-                            <a href="#">טיקטים בלי זמנים</a>
-                        </li>
-                        <li>
-                            <a href="#">טיקטים שאושרו</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#pageSubmenu"
-                       data-toggle="collapse"
-                       aria-expanded="false"
-                       class="dropdown-toggle">
-                        דוחות מנהלים
-                        <i class="fa fa-bar-chart" aria-hidden="true"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#"> Code Review חריגות</a>
-                        </li>
-                        <li>
-                            <a href="#">טיקטים שלא מקושרים לגירסה</a>
-                        </li>
-                        <li>
-                            <a href="#">Power BI</a>
-                        </li>
-                        <li>
-                            <a href="#">SLA חריגות</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li>
-                    <a href="#systemManagement"
-                       data-toggle="collapse"
-                       aria-expanded="false"
-                       class="dropdown-toggle">
-                        ניהול מערכת
-                        <i class="fa fa-cog" aria-hidden="true"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="systemManagement">
-                        <li>
-                            <a href="#">ניהול משתמשים</a>
-                        </li>
-                        <li>
-                            <a href="#">הוספת משתמש</a>
-                        </li>
-                        <li>
-                            <a href="#">שינוי סיסמא</a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li style="margin-top: 50vh;">
-                    <a href="#output" data-toggle="collapse" aria-expanded="false">
-                        יציאה
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>
-                    </a>
-                </li>
-            </ul>
-        </aside>
-
-        <main class="content">
-            <header>
-                <table>
-                    <tr>
-                        <td style="width: 80px; height: 80px"></td>
-                        <td>
-                            <button id="newTicket">
-                                טיקט חדש
-                                <i class="fa fa-plus" aria-hidden="true"></i>
-                            </button>
-                        </td>
-                    </tr>
-                </table>
-            </header>
-
-            <section>
-                <div id="jsGrid"></div>
-            </section>
-        </main>
-    </div>
-
-    <div id="popUpNewTicket" hidden>
-        <form id="newTicketForm">
-            <div class="container">
-                <h5>יצירת טיקט חדש</h5>
-
-                <br />
-
-                <div class="mb-3">
-                    <label for="ticketTitle" class="form-label">כותרת דרישה</label>
-                    <input type="text" class="form-control" id="ticketTitle" />
+    <body>
+        <div class="wrapper">
+            <aside id="sidebar">
+                <div class="sidebar-header">
+                    <div style="display: flex; justify-content: center">
+                        <img id="imgProfile" src="https://wac-cdn.atlassian.com/dam/jcr:ba03a215-2f45-40f5-8540-b2015223c918/Max-R_Headshot%20(1).jpg?cdnVersion=1746" alt="avatar">
+                    </div>
+                    <br />
+                    <div style="display: flex; justify-content: center">
+                        <label id="userName">Sergey Butermaiev</label>
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <label for="priority">עדיפות</label>
-                    <select class="form-select"
-                            aria-label="Default select example"
-                            id="priority"></select>
-                </div>
+                <ul class="list-unstyled components">
+                    <div class="gradient-line"></div>
 
-                <div class="mb-3">
-                    <label for="typeTreatment">סוג טיפול</label>
-                    <select class="form-select"
-                            aria-label="Default select example"
-                            id="typeTreatment"></select>
-                </div>
+                    <li class="active">
+                        <a href="#homeSubmenu"
+                           data-toggle="collapse"
+                           aria-expanded="false"
+                           class="dropdown-toggle">
+                            <i class="fa fa-ticket" aria-hidden="true"></i> טיקטים
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">כל הטיקטים</a>
+                            </li>
+                            <li>
+                                <a href="#">טיקטים פתוחים</a>
+                            </li>
+                            <li>
+                                <a href="#">טיקטים שחזרו</a>
+                            </li>
+                            <li>
+                                <a href="#">טיקטים בלי זמנים</a>
+                            </li>
+                            <li>
+                                <a href="#">טיקטים שאושרו</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                <div class="mb-3">
-                    <label for="tagging">תיוג</label>
-                    <select class="form-select"
-                            aria-label="Default select example"
-                            id="tagging"></select>
-                </div>
+                    <li>
+                        <a href="#pageSubmenu"
+                           data-toggle="collapse"
+                           aria-expanded="false"
+                           class="dropdown-toggle">
+                            דוחות מנהלים
+                            <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#"> Code Review חריגות</a>
+                            </li>
+                            <li>
+                                <a href="#">טיקטים שלא מקושרים לגירסה</a>
+                            </li>
+                            <li>
+                                <a href="#">Power BI</a>
+                            </li>
+                            <li>
+                                <a href="#">SLA חריגות</a>
+                            </li>
+                        </ul>
+                    </li>
 
-                <div class="mb-3">
-                    <label for="formFileMultiple">הוספת קובץ</label>
+                    <li>
+                        <a href="#systemManagement"
+                           data-toggle="collapse"
+                           aria-expanded="false"
+                           class="dropdown-toggle">
+                            ניהול מערכת
+                            <i class="fa fa-cog" aria-hidden="true"></i>
+                        </a>
+                        <ul class="collapse list-unstyled" id="systemManagement">
+                            <li>
+                                <a href="#">ניהול משתמשים</a>
+                            </li>
+                            <li>
+                                <a href="#">הוספת משתמש</a>
+                            </li>
+                            <li>
+                                <a href="#">שינוי סיסמא</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li style="margin-top: 50vh;">
+                        <a href="#output" data-toggle="collapse" aria-expanded="false">
+                            יציאה
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <main class="content">
+                <header>
+                    <table>
+                        <tr>
+                            <td style="width: 80px; height: 80px"></td>
+                            <td>
+                                <button id="newTicket">
+                                    טיקט חדש
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    </table>
+                </header>
+
+                <section>
+                    <div id="jsGrid"></div>
+                </section>
+            </main>
+        </div>
+        @* PopUp new Ticket *@
+        <div id="popUpNewTicket" hidden>
+            <form id="newTicketForm">
+                <div class="container">
+                    <h5>יצירת טיקט חדש</h5>
+
                     <br />
 
-                    <button id="fileSelect" class="btn btn-primary">בחירת קובץ</button>
+                    <div class="mb-3">
+                        <label for="ticketTitle" class="form-label">כותרת דרישה</label>
+                        <input type="text" class="form-control" id="ticketTitle" />
+                    </div>
 
-                    <input type="file" id="formFileMultiple" multiple />
-                    <span id="fileNames">6</span>
+                    <div class="mb-3">
+                        <label for="priority">עדיפות</label>
+                        <select class="form-select"
+                                aria-label="Default select example"
+                                id="priority"></select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="typeTreatment">סוג טיפול</label>
+                        <select class="form-select"
+                                aria-label="Default select example"
+                                id="typeTreatment"></select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tagging">תיוג</label>
+                        <select class="form-select"
+                                aria-label="Default select example"
+                                id="tagging"></select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="formFileMultiple">הוספת קובץ</label>
+                        <br />
+
+                        <button id="fileSelect" class="btn btn-primary">בחירת קובץ</button>
+
+                        <input type="file" id="formFileMultiple" multiple />
+                        <span id="fileNames">6</span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="ticketDesc">תיאור קריאה</label>
+                        <textarea class="form-control" placeholder="" id="desc"></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <input type="button" value="ליצור" id="createNewTicket" />
+                        <input type="button" value="ביטול" id="cencelTicket" />
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        @* PopUp new User *@
+        <form class="new-user">
+            <div class="new-user-container">
+                <h6 id="formLabel">הוספת משתמש חדש</h6>
+
+                <div class="form-group">
+                    <label class="new-user-label" for="userName">שם משתמש</label>
+                    <input type="text" class="form-control" id="userName" />
                 </div>
 
-                <div class="mb-3">
-                    <label for="ticketDesc">תיאור קריאה</label>
-                    <textarea class="form-control" placeholder="" id="desc"></textarea>
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col">
+                            <label class="new-user-label" for="firstName">שם פרטי</label>
+                            <input type="text" class="form-control" id="firstName" />
+                        </div>
+                        <div class="col">
+                            <label class="new-user-label" for="lastName">שם משפחה</label>
+                            <input type="text" class="form-control" id="lastName" />
+                        </div>
+                    </div>
                 </div>
 
-                <div class="mb-3">
-                    <input type="button" value="ליצור" id="createNewTicket" />
-                    <input type="button" value="ביטול" id="cencelTicket" />
+                <div class="form-group">
+                    <label class="new-user-label" for="userEmail">אימייל</label>
+                    <input type="email" class="form-control" id="userEmail" />
+                </div>
+
+                <div class="form-group">
+                    <label class="new-user-label" for="userPhone">טלפון</label>
+                    <input type="tel" class="form-control" id="userPhone" />
+                </div>
+
+                <div class="form-group">
+                    <label class="new-user-label" for="titleUser">תפקיד</label>
+                    <select id="titleUser" class="form-select"></select>
+                </div>
+
+                <div class="form-group">
+                    <label class="new-user-label" for="avatarImage">תמונת פרופיל</label>
+                    <input class="form-control" type="file" id="avatarImage" />
+                </div>
+
+                <div class="form-group">
+                    <label class="new-user-label" for="passwordUser">סיסמא</label>
+                    <input id="passwordUser"
+                           type="password"
+                           class="form-control newUserControl" />
+                </div>
+
+                <div class="form-group">
+                    <label class="new-user-label" for="confirmUserPassword">אימות סיסמא</label>
+                    <input id="confirmUserPassword"
+                           type="password"
+                           class="form-control newUserControl" />
+                </div>
+
+                <div class="mb-3" style="margin-top: 10px">
+                    <input type="button" value="שמור" id="NewUserSave" />
+                    <input type="button" value="ביטל" id="NewUserCancel" />
                 </div>
             </div>
         </form>
-    </div>
-</body>
+
+    </body>
 
 
-    </html>
+ </html>
 
 
 @{
