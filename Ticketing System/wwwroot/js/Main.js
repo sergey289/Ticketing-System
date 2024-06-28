@@ -1,4 +1,9 @@
 ﻿$(function () {
+
+    console.log("main.js");
+    GetRolesData();
+
+
     $("#sidebarCollapse").on("click", function () {
         $("#sidebar").toggleClass("active");
     });
@@ -19,6 +24,15 @@
             $("#formFileMultiple").click();
         }, 100);
     });
+
+    $('#NewUserSave').on('click', function () {
+
+        AddNewEmployee();
+    });
+
+
+
+
 });
 
 function ShowData() {
@@ -132,4 +146,50 @@ function ShowData() {
 }
 function OpenEditPage() {
     window.open("EditTicket.html", "_blank").focus();
+}
+function GetRolesData() {
+
+    $.ajax({
+        url: "/Main?handler=RolesData",
+        type: "GET",
+        async:true,
+        success: function (data) {
+
+            if (data) {
+
+                var $select = $("#titleUser");
+                $select.empty();
+                $.each(data, function (index, item) {
+                    $select.append($("<option>", {
+                        value: item.role_id,
+                        text: item.role_name
+                    }));
+                });
+            }          
+        },
+        error: function (xhr, status, error) {
+            console.error("Error fetching data:", error);
+        }
+    });
+
+}
+function AddNewEmployee(event) {
+
+    event.preventDefault(); 
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch("/Main?handler=AddNewUser", {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            // Handle the response data
+            console.log('Success:', data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
 }

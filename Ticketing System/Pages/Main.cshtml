@@ -22,6 +22,8 @@
     <script src="~/js/Main.js"></script>
     <script src="~/js/EditTicket.js"></script>
 
+
+
 </head>
     <body>
         <div class="wrapper">
@@ -32,7 +34,7 @@
                     </div>
                     <br />
                     <div style="display: flex; justify-content: center">
-                        <label id="userName">Sergey Butermaiev</label>
+                        <label id="loginUserName">Sergey Butermaiev</label>
                     </div>
                 </div>
 
@@ -197,68 +199,64 @@
         </div>
 
         @* PopUp new User *@
-        <form class="new-user">
-            <div class="new-user-container">
-                <h6 id="formLabel">הוספת משתמש חדש</h6>
+    <form method="post" class="new-user" id="addUserForm" onsubmit="AddNewEmployee(event)">
+        <div class="new-user-container">
+            <h6 id="formLabel">הוספת משתמש חדש</h6>
 
-                <div class="form-group">
-                    <label class="new-user-label" for="userName">שם משתמש</label>
-                    <input type="text" class="form-control" id="userName" />
-                </div>
+            <div class="form-group">
+                <label class="new-user-label" for="userName">שם משתמש</label>
+                <input type="text" class="form-control" id="userName" name="UserName" />
+            </div>
 
-                <div class="form-group">
-                    <div class="row">
-                        <div class="col">
-                            <label class="new-user-label" for="firstName">שם פרטי</label>
-                            <input type="text" class="form-control" id="firstName" />
-                        </div>
-                        <div class="col">
-                            <label class="new-user-label" for="lastName">שם משפחה</label>
-                            <input type="text" class="form-control" id="lastName" />
-                        </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col">
+                        <label class="new-user-label" for="firstName">שם פרטי</label>
+                        <input type="text" class="form-control" id="firstName" name="FirstName" />
+                    </div>
+                    <div class="col">
+                        <label class="new-user-label" for="lastName">שם משפחה</label>
+                        <input type="text" class="form-control" id="lastName" name="LastName" />
                     </div>
                 </div>
-
-                <div class="form-group">
-                    <label class="new-user-label" for="userEmail">אימייל</label>
-                    <input type="email" class="form-control" id="userEmail" />
-                </div>
-
-                <div class="form-group">
-                    <label class="new-user-label" for="userPhone">טלפון</label>
-                    <input type="tel" class="form-control" id="userPhone" />
-                </div>
-
-                <div class="form-group">
-                    <label class="new-user-label" for="titleUser">תפקיד</label>
-                    <select id="titleUser" class="form-select"></select>
-                </div>
-
-                <div class="form-group">
-                    <label class="new-user-label" for="avatarImage">תמונת פרופיל</label>
-                    <input class="form-control" type="file" id="avatarImage" />
-                </div>
-
-                <div class="form-group">
-                    <label class="new-user-label" for="passwordUser">סיסמא</label>
-                    <input id="passwordUser"
-                           type="password"
-                           class="form-control newUserControl" />
-                </div>
-
-                <div class="form-group">
-                    <label class="new-user-label" for="confirmUserPassword">אימות סיסמא</label>
-                    <input id="confirmUserPassword"
-                           type="password"
-                           class="form-control newUserControl" />
-                </div>
-
-                <div class="mb-3" style="margin-top: 10px">
-                    <input type="button" value="שמור" id="NewUserSave" />
-                    <input type="button" value="ביטל" id="NewUserCancel" />
-                </div>
             </div>
-        </form>
+
+            <div class="form-group">
+                <label class="new-user-label" for="userEmail">אימייל</label>
+                <input type="email" class="form-control" id="userEmail" name="Email" />
+            </div>
+
+            <div class="form-group">
+                <label class="new-user-label" for="userPhone">טלפון</label>
+                <input type="tel" class="form-control" id="userPhone" name="Phone" />
+            </div>
+
+            <div class="form-group">
+                <label class="new-user-label" for="titleUser">תפקיד</label>
+                <select id="titleUser" class="form-select" name="RoleID"></select>
+            </div>
+
+            <div class="form-group">
+                <label class="new-user-label" for="avatarImage">תמונת פרופיל</label>
+                <input class="form-control" type="file" id="avatarImage" name="UserImage" />
+            </div>
+
+            <div class="form-group">
+                <label class="new-user-label" for="passwordUser">סיסמא</label>
+                <input id="passwordUser" type="password" class="form-control newUserControl" name="Password" />
+            </div>
+
+            <div class="form-group">
+                <label class="new-user-label" for="confirmUserPassword">אימות סיסמא</label>
+                <input id="confirmUserPassword" type="password" class="form-control newUserControl" name="ConfirmPassword" />
+            </div>
+
+            <div class="mb-3" style="margin-top: 10px">
+                <input type="submit" value="שמור" value="Submit" asp-page-handler="Submit" id="NewUserSave" />
+                <input type="button" value="ביטל" id="NewUserCancel" />
+            </div>
+        </div>
+    </form>
 
     </body>
 
