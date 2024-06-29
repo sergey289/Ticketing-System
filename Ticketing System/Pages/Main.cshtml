@@ -2,11 +2,12 @@
 @model Ticketing_Systems.Pages.MainModel
 @using Ticketing_Systems.Data;
 @inject SQL sql;
-
 @{
   //  sql.GetStatuses();
     Layout = "_Layout";
 }
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,9 +22,6 @@
     <link rel="stylesheet" href="~/css/Main.css" />
     <script src="~/js/Main.js"></script>
     <script src="~/js/EditTicket.js"></script>
-
-
-
 </head>
     <body>
         <div class="wrapper">
@@ -205,18 +203,21 @@
 
             <div class="form-group">
                 <label class="new-user-label" for="userName">שם משתמש</label>
-                <input type="text" class="form-control" id="userName" name="UserName" />
+                <input type="text" asp-for="NewEmployee.UserName" class="form-control" id="userName" name="NewEmployee.UserName" />
+                <span class="text-danger" asp-validation-for="NewEmployee.UserName"></span>
             </div>
 
             <div class="form-group">
                 <div class="row">
                     <div class="col">
                         <label class="new-user-label" for="firstName">שם פרטי</label>
-                        <input type="text" class="form-control" id="firstName" name="FirstName" />
+                        <input type="text" asp-for="NewEmployee.FirstName" class="form-control" id="firstName" name="NewEmployee.FirstName" />
+                        <span class="text-danger" asp-validation-for="NewEmployee.FirstName"></span>
                     </div>
                     <div class="col">
                         <label class="new-user-label" for="lastName">שם משפחה</label>
-                        <input type="text" class="form-control" id="lastName" name="LastName" />
+                        <input type="text" asp-for="NewEmployee.LastName" class="form-control" id="lastName" name="NewEmployee.LastName" />
+                        <span class="text-danger" asp-validation-for="NewEmployee.LastName"></span>
                     </div>
                 </div>
             </div>
@@ -228,7 +229,8 @@
 
             <div class="form-group">
                 <label class="new-user-label" for="userPhone">טלפון</label>
-                <input type="tel" class="form-control" id="userPhone" name="Phone" />
+                <input type="tel" asp-for=NewEmployee.Phone class="form-control" id="userPhone" name="NewEmployee.Phone" />
+                <span class="text-danger" asp-validation-for="NewEmployee.Phone"></span>
             </div>
 
             <div class="form-group">
@@ -243,7 +245,8 @@
 
             <div class="form-group">
                 <label class="new-user-label" for="passwordUser">סיסמא</label>
-                <input id="passwordUser" type="password" class="form-control newUserControl" name="Password" />
+                <input id="passwordUser" asp-for="NewEmployee.Password" type="password" class="form-control newUserControl" name="NewEmployee.Password" />
+                <span class="text-danger" asp-validation-for="NewEmployee.Password"></span>
             </div>
 
             <div class="form-group">
@@ -256,6 +259,7 @@
                 <input type="button" value="ביטל" id="NewUserCancel" />
             </div>
         </div>
+        <div asp-validation-summary="All" class="text-danger"></div>
     </form>
 
     </body>

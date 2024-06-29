@@ -31,8 +31,6 @@
     });
 
 
-
-
 });
 
 function ShowData() {
@@ -185,11 +183,18 @@ function AddNewEmployee(event) {
     })
         .then(response => response.json())
         .then(data => {
-            // Handle the response data
-            console.log('Success:', data);
+            Swal.fire({
+                title: "!משתמש נוסף בהצלחה",
+                //text: "You clicked the button!",
+                icon: "success"
+            });
         })
         .catch(error => {
-            console.error('Error:', error);
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "!אירעה שגיאה בהוספת משתמש",
+            });
         });
 
 }

@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Configuration;
 using System.Data;
@@ -48,22 +49,38 @@ namespace Ticketing_Systems.Pages
 
         }
 
-        public async void OnPostAddNewUser(Employee person)
+        public async Task<IActionResult> OnPostAddNewUser(Employee person)
         {
 
-            byte[] userImage = default;
-
-            if (person.UserImage != null && person.UserImage.Length != 0)
+            if (string.IsNullOrEmpty(NewEmployee.UserName))
             {
-              
-                using (var memoryStream = new MemoryStream())
-                {
-                    await person.UserImage.CopyToAsync(memoryStream);
-                    userImage = memoryStream.ToArray();
-                }
+                ModelState.AddModelError("NewEmployee.UserName", "שDSDSDSDSDSDSSDת");
+                return Page();
             }
 
-            _service.AddNewEmployee(person.UserName, person.Password, person.FirstName, person.LastName, person.Email, person.Phone, person.RoleID, true, userImage);
+            if (ModelState.IsValid)
+            {
+
+                byte[] userImage = default;
+
+                if (person.UserImage != null && person.UserImage.Length != 0)
+                {
+
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        await person.UserImage.CopyToAsync(memoryStream);
+                        userImage = memoryStream.ToArray();
+                    }
+                }
+
+                _service.AddNewEmployee(person.UserName, person.Password, person.FirstName, person.LastName, person.Email, person.Phone, person.RoleID, true, userImage);
+            }
+            else
+            {
+
+               
+            }
+            return RedirectToPage("/SuccessPage");
         }
   
     }
