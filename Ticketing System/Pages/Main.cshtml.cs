@@ -8,6 +8,7 @@ using System.Reflection;
 using Ticketing_Systems.Models;
 using TicketingSystemService.Data;
 
+
 namespace Ticketing_Systems.Pages
 {
 
@@ -49,38 +50,33 @@ namespace Ticketing_Systems.Pages
 
         }
 
-        public async Task<IActionResult> OnPostAddNewUser(Employee person)
+        public async Task<IActionResult> OnPostAddNewUser()
         {
-
-            if (string.IsNullOrEmpty(NewEmployee.UserName))
-            {
-                ModelState.AddModelError("NewEmployee.UserName", "שDSDSDSDSDSDSSDת");
-                return Page();
-            }
 
             if (ModelState.IsValid)
             {
 
                 byte[] userImage = default;
 
-                if (person.UserImage != null && person.UserImage.Length != 0)
+                if (NewEmployee.UserImage != null && NewEmployee.UserImage.Length != 0)
                 {
 
                     using (var memoryStream = new MemoryStream())
                     {
-                        await person.UserImage.CopyToAsync(memoryStream);
+                        await NewEmployee.UserImage.CopyToAsync(memoryStream);
                         userImage = memoryStream.ToArray();
                     }
                 }
 
-                _service.AddNewEmployee(person.UserName, person.Password, person.FirstName, person.LastName, person.Email, person.Phone, person.RoleID, true, userImage);
+               _service.AddNewEmployee(NewEmployee.UserName, NewEmployee.Password, NewEmployee.FirstName, NewEmployee.LastName, NewEmployee.Email, NewEmployee.Phone, NewEmployee.RoleID, true, userImage);
+
+                return new JsonResult(new { success = true, message = "User added successfully" });
             }
             else
             {
+                return new JsonResult(new { success = false, message = "Model state is invalid" });
 
-               
-            }
-            return RedirectToPage("/SuccessPage");
+            }          
         }
   
     }

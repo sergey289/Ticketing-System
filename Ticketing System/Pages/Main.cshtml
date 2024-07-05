@@ -16,6 +16,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Include jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Include jsGrid library -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsgrid@1.5.3/css/jsgrid.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsgrid@1.5.3/dist/jsgrid.min.js"></script>
+
+
     @* <link rel="stylesheet" href="css/AddNewTicket.css" /> *@
     <link rel="stylesheet" href="~/css/NewUser.css"/>
     @* <link rel="stylesheet" href="~/css/NewPassword.css" /> *@
@@ -102,7 +111,7 @@
                                 <a href="#">ניהול משתמשים</a>
                             </li>
                             <li>
-                                <a href="#">הוספת משתמש</a>
+                                <a   id="addNewUser" href="#">הוספת משתמש</a>
                             </li>
                             <li>
                                 <a href="#">שינוי סיסמא</a>
@@ -197,7 +206,7 @@
         </div>
 
         @* PopUp new User *@
-    <form method="post" class="new-user" id="addUserForm" onsubmit="AddNewEmployee(event)">
+    <form method="post" class="new-user" id="addUserForm" onsubmit="AddNewEmployee(event)" hidden="hidden">
         <div class="new-user-container">
             <h6 id="formLabel">הוספת משתמש חדש</h6>
 
@@ -224,7 +233,7 @@
 
             <div class="form-group">
                 <label class="new-user-label" for="userEmail">אימייל</label>
-                <input type="email" class="form-control" id="userEmail" name="Email" />
+                <input type="email" asp-for="NewEmployee.Email" class="form-control" id="userEmail" name="NewEmployee.Email" />
             </div>
 
             <div class="form-group">
@@ -235,12 +244,12 @@
 
             <div class="form-group">
                 <label class="new-user-label" for="titleUser">תפקיד</label>
-                <select id="titleUser" class="form-select" name="RoleID"></select>
+                <select id="titleUser" asp-for="NewEmployee.RoleID" class="form-select" name="NewEmployee.RoleID"></select>
             </div>
 
             <div class="form-group">
                 <label class="new-user-label" for="avatarImage">תמונת פרופיל</label>
-                <input class="form-control" type="file" id="avatarImage" name="UserImage" />
+                <input class="form-control" asp-for="NewEmployee.UserImage" type="file" id="avatarImage" name="NewEmployee.UserImage" />
             </div>
 
             <div class="form-group">
@@ -256,7 +265,7 @@
 
             <div class="mb-3" style="margin-top: 10px">
                 <input type="submit" value="שמור" value="Submit" asp-page-handler="Submit" id="NewUserSave" />
-                <input type="button" value="ביטל" id="NewUserCancel" />
+                <input type="button" value="ביטל" id="NewUserCancel"/>
             </div>
         </div>
         <div asp-validation-summary="All" class="text-danger"></div>

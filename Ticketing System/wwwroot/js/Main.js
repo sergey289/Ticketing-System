@@ -1,8 +1,8 @@
 ﻿$(function () {
 
     console.log("main.js");
-    GetRolesData();
 
+    GetRolesData();
 
     $("#sidebarCollapse").on("click", function () {
         $("#sidebar").toggleClass("active");
@@ -30,6 +30,15 @@
         AddNewEmployee();
     });
 
+    $('#NewUserCancel').on('click', function () {
+
+        $("#addUserForm").attr("hidden", "hidden");
+    });
+
+    $('#addNewUser').on('click', function () {
+
+        $("#addUserForm").removeAttr("hidden");
+    });
 
 });
 
@@ -183,11 +192,14 @@ function AddNewEmployee(event) {
     })
         .then(response => response.json())
         .then(data => {
-            Swal.fire({
-                title: "!משתמש נוסף בהצלחה",
-                //text: "You clicked the button!",
-                icon: "success"
-            });
+            if (data.success) {
+                Swal.fire({
+                    title: "!משתמש נוסף בהצלחה",
+                    icon: "success"
+                });
+            } else {
+                throw new Error(data.message);
+            }
         })
         .catch(error => {
             Swal.fire({
