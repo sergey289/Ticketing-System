@@ -4,6 +4,9 @@ namespace Ticketing_Systems.Models
 {
     public class Employee
     {
+
+        public int EmployeeID { get; set; }
+
         [Required(ErrorMessage = "שדה שם המשתמש הוא שדה חובה")]
         public string UserName { get; set; }
 

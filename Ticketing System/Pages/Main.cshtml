@@ -7,8 +7,6 @@
     Layout = "_Layout";
 }
 
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,13 +17,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Include jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <!-- Include jsGrid library -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsgrid@1.5.3/css/jsgrid.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/jsgrid@1.5.3/dist/jsgrid.min.js"></script>
-
-
-    @* <link rel="stylesheet" href="css/AddNewTicket.css" /> *@
+    <link rel="stylesheet" href="css/AddNewTicket.css" />
     <link rel="stylesheet" href="~/css/NewUser.css"/>
     @* <link rel="stylesheet" href="~/css/NewPassword.css" /> *@
     <link rel="stylesheet" href="~/css/Main.css" />
@@ -149,8 +144,8 @@
             </main>
         </div>
         @* PopUp new Ticket *@
-        <div id="popUpNewTicket" hidden>
-            <form id="newTicketForm">
+        <div id="popUpNewTicket">
+        <form method="post" id="newTicketForm" enctype="multipart/form-data" asp-page-handler="AddNewTicket" onsubmit="AddNewTicket(event)">
                 <div class="container">
                     <h5>יצירת טיקט חדש</h5>
 
@@ -158,55 +153,81 @@
 
                     <div class="mb-3">
                         <label for="ticketTitle" class="form-label">כותרת דרישה</label>
-                        <input type="text" class="form-control" id="ticketTitle" />
+                    <input type="text" asp-for="NewTicket.TicketTitle" class="form-control" name="NewTicket.TicketTitle" id="ticketTitle" />
+                    <span class="text-danger" asp-validation-for="NewTicket.TicketTitle"></span>
                     </div>
+
+
+                <div class="mb-3">
+                    <label for="typeTreatment">אפליקציה</label>
+                    <select asp-for="NewTicket.ApplicationID" class="form-select"
+                            aria-label="Default select example"
+                            id="application"
+                            name="NewTicket.ApplicationID">
+                    </select>
+                    <span class="text-danger" asp-validation-for="NewTicket.ApplicationID"></span>
+                </div>
 
                     <div class="mb-3">
                         <label for="priority">עדיפות</label>
-                        <select class="form-select"
+                    <select asp-for="NewTicket.PriorityID" class="form-select"
                                 aria-label="Default select example"
-                                id="priority"></select>
+                                id="priority"
+                                 name="NewTicket.PriorityID">
+                            </select>
+                    <span class="text-danger" asp-validation-for="NewTicket.PriorityID"></span>
                     </div>
+
+                <div class="mb-3">
+                    <label for="priority">מחלקה</label>
+                    <select asp-for="NewTicket.DepartmentID" class="form-select"
+                            aria-label="Default select example"
+                            id="department"
+                            name="NewTicket.DepartmentID">
+                    </select>
+                    <span class="text-danger" asp-validation-for="NewTicket.DepartmentID"></span>
+                </div>
 
                     <div class="mb-3">
                         <label for="typeTreatment">סוג טיפול</label>
-                        <select class="form-select"
+                    <select asp-for="NewTicket.TypeTreatmentID" class="form-select"
                                 aria-label="Default select example"
-                                id="typeTreatment"></select>
+                                id="typeTreatment"
+                                name="NewTicket.TypeTreatmentID">
+                             </select>
+                    <span class="text-danger" asp-validation-for="NewTicket.TypeTreatmentID"></span>
                     </div>
 
                     <div class="mb-3">
-                        <label for="tagging">תיוג</label>
-                        <select class="form-select"
-                                aria-label="Default select example"
-                                id="tagging"></select>
-                    </div>
 
-                    <div class="mb-3">
+                        <label for="formFileMultiple">הוספת קובץ</label>
                         <label for="formFileMultiple">הוספת קובץ</label>
                         <br />
 
                         <button id="fileSelect" class="btn btn-primary">בחירת קובץ</button>
 
-                        <input type="file" id="formFileMultiple" multiple />
-                        <span id="fileNames">6</span>
+                    @* <input type="file" asp-for="NewTicket.TicketFile" name="NewTicket.TicketFile" id="formFileMultiple" multiple /> *@
+
+                    <input class="form-control" asp-for="NewTicket.TicketFile" type="file" id="formFileMultiple" name="NewTicket.TicketFile" />
+
+                   <span id="fileNames">0</span>
                     </div>
 
                     <div class="mb-3">
                         <label for="ticketDesc">תיאור קריאה</label>
-                        <textarea class="form-control" placeholder="" id="desc"></textarea>
+                    <textarea asp-for="NewTicket.Description" name="NewTicket.Description" class="form-control" placeholder="" id="desc"></textarea>
                     </div>
 
                     <div class="mb-3">
-                        <input type="button" value="ליצור" id="createNewTicket" />
-                        <input type="button" value="ביטול" id="cencelTicket" />
+                    <input type="submit" value="ליצור" value="Submit" asp-page-handler="Submit" id="createNewTicket" />
+                    <input type="button" value="ביטול" id="cencelTicket" />
+
                     </div>
                 </div>
             </form>
         </div>
-
         @* PopUp new User *@
-    <form method="post" class="new-user" id="addUserForm" onsubmit="AddNewEmployee(event)" hidden="hidden">
+        <form method="post" class="new-user" asp-page-handler="AddEmployee" id="addUserForm" onsubmit="AddNewEmployee(event)" hidden="hidden">
         <div class="new-user-container">
             <h6 id="formLabel">הוספת משתמש חדש</h6>
 

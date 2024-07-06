@@ -4,6 +4,14 @@
 
     GetRolesData();
 
+    GetPriorities();
+
+    GetIssueTypes();
+
+    GetApplicationsList();
+
+    GetDepartmentsList();
+
     $("#sidebarCollapse").on("click", function () {
         $("#sidebar").toggleClass("active");
     });
@@ -206,6 +214,140 @@ function AddNewEmployee(event) {
                 icon: "error",
                 title: "Oops...",
                 text: "!אירעה שגיאה בהוספת משתמש",
+            });
+        });
+
+}
+function GetPriorities() {
+
+    $.ajax({
+        url: "/Main?handler=Priorities",
+        type: "GET",
+        async: true,
+        success: function (data) {
+
+            if (data) {
+
+                var $select = $("#priority");
+                $select.empty();
+                $.each(data, function (index, item) {
+                    $select.append($("<option>", {
+                        value: item.priority_id,
+                        text: item.name
+                    }));
+                });
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error fetching data:", error);
+        }
+    });
+
+}
+function GetIssueTypes() {
+
+    $.ajax({
+        url: "/Main?handler=IssueTypes",
+        type: "GET",
+        async: true,
+        success: function (data) {
+
+            if (data) {
+
+                var $select = $("#typeTreatment");
+                $select.empty();
+                $.each(data, function (index, item) {
+                    $select.append($("<option>", {
+                        value: item.issue_type_ID,
+                        text: item.name
+                    }));
+                });
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error fetching data:", error);
+        }
+    });
+
+}
+function GetApplicationsList() {
+
+    $.ajax({
+        url: "/Main?handler=ApplicationList",
+        type: "GET",
+        async: true,
+        success: function (data) {
+
+            if (data) {
+
+                var $select = $("#application");
+                $select.empty();
+                $.each(data, function (index, item) {
+                    $select.append($("<option>", {
+                        value: item.application_id,
+                        text: item.name
+                    }));
+                });
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error fetching data:", error);
+        }
+    });
+
+}
+function GetDepartmentsList() {
+
+    $.ajax({
+        url: "/Main?handler=Departments",
+        type: "GET",
+        async: true,
+        success: function (data) {
+
+            if (data) {
+
+                var $select = $("#department");
+                $select.empty();
+                $.each(data, function (index, item) {
+                    $select.append($("<option>", {
+                        value: item.department_ID,
+                        text: item.name
+                    }));
+                });
+            }
+        },
+        error: function (xhr, status, error) {
+            console.error("Error fetching data:", error);
+        }
+    });
+
+}
+function AddNewTicket(event) {
+
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+
+    fetch("/Main?handler=AddNewTicket", {
+        method: 'POST',
+        body: formData
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                Swal.fire({
+                    title: "!טיקט נוסף בהצלחה",
+                    icon: "success"
+                });
+            } else {
+                throw new Error(data.message);
+            }
+        })
+        .catch(error => {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "!אירעה שגיאה ביצירת טיקט",
             });
         });
 
